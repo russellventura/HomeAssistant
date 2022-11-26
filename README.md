@@ -3,8 +3,6 @@
 With my interest in smart home technology and energy conservation, I have added a multitiude of sensors around the house to monitor energy usage and wanted to create
 an easy way to see that information in a usable way.
 
-<a href="Video Demo of Dashboards" target="_blank"><img style="margin: 10px" src="https://russellventura.co.uk/wp-content/uploads/2022/11/HomeAssistant-Dashboards.mp4" alt="Demo Dashboard"  /></a>
-
 I created 3 dashboards
 
 #### Kitchen Dashboard
