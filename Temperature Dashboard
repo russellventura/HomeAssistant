@@ -1,0 +1,151 @@
+type: picture-elements
+image: /local/HA-TEMP-SENSORS.png
+elements:
+  - type: custom:digital-clock
+    dateFormat:
+      weekday: long
+      day: 2-digit
+      month: short
+    style:
+      top: 12%
+      left: 69%
+      font-size: 20px
+      border: solid 5px
+      border-color: black
+      border-radius: 25px
+      width: 32%
+      overflow: hidden
+  - type: image
+    image: /local/Temps-Back-Button.png
+    tap_action:
+      action: navigate
+      navigation_path: /lovelace/kitchen-floor-plan
+    style:
+      top: 12.5%
+      left: 92.5%
+      width: 10%
+      border-radius: 0px
+  - type: state-badge
+    entity: sensor.hallway_temperature_sensor
+    title: HALLWAY SENSOR
+    style:
+      top: 41.5%
+      left: 24%
+      color: rgba(0,0,0,0)
+      '--label-badge-red': green
+      background: rgb(0,0,0,0)
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.kitchen_temperature_sensor
+    title: KITCHEN SENSOR
+    style:
+      top: 42%
+      left: 8%
+      color: rgb(0,0,0,0)
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.network_room_temperature_sensor
+    title: NETWORK ROOM SENSOR
+    style:
+      top: 56%
+      left: 22%
+      color: rgba(0,0,0,0)
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.front_door_sensor_temperature_measurement
+    title: FRONT DOOR SENSOR
+    style:
+      top: 53%
+      left: 38%
+      color: rgba(0,0,0,0)
+      '--label-badge-red': blue
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.front_room_temperature_sensor
+    title: LIVING ROOM SENSOR
+    style:
+      top: 77%
+      left: 31.5%
+      color: rgba(0,0,0,0)
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.water_leak_sensor_temperature_measurement
+    title: BATHROOM SENSOR
+    style:
+      top: 31%
+      left: 54%
+      color: rgba(0,0,0,0)
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.lisa_bedroom_temperature_sensor
+    title: BEDROOM 1 SENSOR
+    style:
+      top: 53%
+      left: 58%
+      color: rgba(0,0,0,0)
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.lisa_office_temperature_sensor
+    title: OFFICE 2 SENSOR
+    style:
+      top: 78%
+      left: 58%
+      color: rgba(0,0,0,0)
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.russ_office_temperature_sensor
+    title: OFFICE 1 SENSOR
+    style:
+      top: 31%
+      left: 81%
+      color: rgba(0,0,0,0)
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.landing_temperature_sensor
+    title: LANDING SENSOR
+    style:
+      top: 68%
+      left: 74%
+      color: rgba(0,0,0,0)
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.conservatory_temperature_sensor
+    title: CONSERVATORY SENSOR
+    style:
+      top: 76%
+      left: 1%
+      color: rgba(0,0,0,0)
+      '--label-badge-red': black
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.dining_room_temperature_sensor
+    title: DINING ROOM SENSOR
+    style:
+      top: 77%
+      left: 12%
+      color: rgba(0,0,0,0)
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.garage_temperature_sensor
+    title: GARAGE SENSOR
+    style:
+      top: 34%
+      left: 36%
+      color: rgba(0,0,0,0)
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.bedroom_2_temperature_sensor
+    title: BEDROOM 2 SENSOR
+    style:
+      top: 57%
+      left: 88%
+      color: rgba(0,0,0,0)
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.retro_room_temperature_sensor
+    title: RETRO ROOM SENSOR
+    style:
+      top: 82%
+      left: 87%
+      color: rgba(0,0,0,0)
+      transform: scale(1,1)
