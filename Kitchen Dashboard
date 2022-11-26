@@ -1,0 +1,219 @@
+type: picture-elements
+image: /local/KITCHENDASHBOARD.png
+elements:
+  - type: image
+    name: DISHWASHER IMAGE TOGGLE
+    entity: switch.tasmota08_2
+    tap_action:
+      action: toggle
+    image: /local/DW-OFF.png
+    state_image:
+      'on': /local/DW-on.png
+    style:
+      left: 50%
+      top: 69%
+      width: 15%
+      border-radius: 5px
+  - type: state-label
+    entity: sensor.tasmota08_energy_power_2
+    name: DISHWASHER ENERGY USAGE
+    style:
+      top: 47%
+      left: 50%
+      color: black
+      font-size: 30px
+  - type: image
+    entity: switch.tasmota_4
+    name: WASHING MACHING IMAGE TOGGLE
+    tap_action:
+      action: toggle
+    image: /local/WM-OFF.png
+    state_image:
+      'on': /local/WM-on.jpg
+    style:
+      left: 31%
+      top: 69%
+      width: 15%
+      border-radius: 5px
+  - type: state-label
+    entity: sensor.tasmota_energy_power_4
+    name: WASHING MACHINE ENERGY USAGE
+    style:
+      top: 47%
+      left: 31.5%
+      color: black
+      font-size: 30px
+  - type: image
+    entity: switch.tasmota
+    name: TUMBLE DRYER IMAGE TOGGLE
+    tap_action:
+      action: toggle
+    image: /local/TD-OFF.png
+    state_image:
+      'on': /local/Dryer-On.png
+    style:
+      left: 11.5%
+      top: 69%
+      width: 15%
+      border-radius: 5px
+  - type: state-label
+    entity: sensor.tasmota_energy_power
+    name: TUMBLE DRYER ENERGY USAGE
+    style:
+      top: 47%
+      left: 12%
+      color: black
+      font-size: 30px
+  - type: custom:button-card
+    entity: light.poppy_light
+    title: POPPY LIGHT TOGGLE
+    tap_action:
+      action: toggle
+    icon: >-
+      [[[ if (entity.state == "off") return "mdi:lightbulb-off"; else return
+      "mdi:lightbulb-on" ]]]
+    name: ' '
+    style:
+      top: 41%
+      left: 64.5%
+      transform: scale(1.5,1.5)
+      '--paper-item-icon-color': white
+      '--ha-card-background': rgb(0,0,0,0)
+      '--ha-card-border-width': 0px
+  - type: custom:button-card
+    entity: light.sink_light
+    title: SINK LIGHT TOGGLE
+    tap_action:
+      action: toggle
+    icon: >-
+      [[[ if (entity.state == "off") return "mdi:lightbulb-off"; else return
+      "mdi:lightbulb-on" ]]]
+    name: ' '
+    style:
+      top: 41%
+      left: 86%
+      transform: scale(1.5,1.5)
+      '--paper-item-icon-color': white
+      '--ha-card-background': rgb(0,0,0,0)
+      '--ha-card-border-width': 0px
+  - type: custom:button-card
+    entity: light.cooker_light
+    title: COOKER LIGHT TOGGLE
+    tap_action:
+      action: toggle
+    icon: >-
+      [[[ if (entity.state == "off") return "mdi:lightbulb-off"; else return
+      "mdi:lightbulb-on" ]]]
+    name: ' '
+    style:
+      top: 41%
+      left: 75%
+      transform: scale(1.5,1.5)
+      '--paper-item-icon-color': white
+      '--ha-card-background': rgb(0,0,0,0)
+      '--ha-card-border-width': 0px
+  - type: state-badge
+    entity: sensor.kitchen_temperature_sensor
+    title: null
+    name: KITCHEN TEMPERATURE SENSOR
+    style:
+      top: 9.5%
+      left: 57%
+      color: rgba(0,0,0,0)
+      transform: scale(1.5,1.5)
+  - type: custom:stack-in-card
+    cards:
+      - type: entities
+        entities:
+          - entity: timer.dishwasher
+            name: ' '
+            show_icon: false
+    style:
+      '--ha-card-background': rgb(0,0,0,0)
+      '--primary-text-color': white
+      '--paper-item-icon-color': rgb(0,0,0,0)
+      '--ha-card-border-width': 0px
+      font-size: 20px
+      top: 90.5%
+      left: 47%
+  - type: custom:stack-in-card
+    cards:
+      - type: entities
+        entities:
+          - entity: timer.dryer
+            name: ' '
+            icon: mdi:av-timer
+    state_color: true
+    show_header_toggle: false
+    style:
+      '--ha-card-background': rgb(0,0,0,0)
+      '--primary-text-color': white
+      '--paper-item-icon-color': rgb(0,0,0,0)
+      '--ha-card-border-width': 0px
+      font-size: 20px
+      top: 90.5%
+      left: 8%
+  - type: custom:stack-in-card
+    cards:
+      - type: entities
+        entities:
+          - entity: timer.washingmachine
+            name: ' '
+            icon: mdi:av-timer
+    style:
+      '--ha-card-background': rgb(0,0,0,0)
+      '--primary-text-color': white
+      '--paper-item-icon-color': rgb(0,0,0,0)
+      '--ha-card-border-width': 0px
+      font-size: 20px
+      top: 90.5%
+      left: 28%
+  - type: custom:digital-clock
+    dateFormat:
+      weekday: long
+      day: 2-digit
+      month: short
+    style:
+      top: 12%
+      left: 83%
+      font-size: 20px
+      border: solid 5px
+      border-color: black
+      border-radius: 25px
+      width: 30%
+      overflow: hidden
+  - type: image
+    image: /local/EnergyIcon.png
+    tap_action:
+      action: navigate
+      navigation_path: /lovelace/givenergy
+    style:
+      top: 79%
+      left: 71%
+      width: 7%
+      border-radius: 10px
+  - type: image
+    image: /local/TempsIcon.png
+    tap_action:
+      action: navigate
+      navigation_path: /lovelace/home-temps
+    style:
+      top: 79%
+      left: 91%
+      width: 7%
+  - type: state-icon
+    entity: sensor.givtcp_sa2221g173_soc
+    style:
+      top: 8%
+      left: 48%
+      color: green
+      '--paper-item-icon-color': Green
+      transform: scale(3,3)
+  - type: state-label
+    entity: sensor.givtcp_sa2221g173_soc
+    style:
+      top: 20.5%
+      left: 50.5%
+      color: black
+      font-size: 20px
+      font-weight: bold
