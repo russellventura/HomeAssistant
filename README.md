@@ -12,7 +12,7 @@ GivEnergy Dashboard
 
 
 
-###Temperature Sensors Dashboard
+##Temperature Sensors Dashboard
 
 The temperature sensors used are SwitchBot thermostats which provide accurate temperature readings for each sensor.
 Each sensor was placed in the relevant room and labelled
