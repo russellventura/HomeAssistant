@@ -5,7 +5,7 @@ an easy way to see that information in a usable way.
 
 I created 3 dashboards
 
-#### Kitchen Dashboard
+## Kitchen Dashboard
 
 <a href="#" target="_blank"><img style="margin: 10px" src="https://russellventura.co.uk/wp-content/uploads/2022/11/KD.jpg" alt="Kitchen Dashboard"  /></a>  
 
@@ -24,7 +24,9 @@ It has 2 additional buttons which link to the other dashboards - Energy Dashboar
 
 Finally at the top, I have a temperature reading for the Kitchen.
 
-#### GivEnergy Dashboard
+<a href="https://github.com/russellventura/HomeAssistant/blob/main/Kitchen%20Dashboard" target="_blank"> Kitchen Dashboard Code</a> 
+
+## GivEnergy Dashboard
 
 <a href="#" target="_blank"><img style="margin: 10px" src="https://russellventura.co.uk/wp-content/uploads/2022/11/GivEnergy-Dashboard.jpg" alt="GivEnergy Dashboard"  /></a>  
 
@@ -34,7 +36,9 @@ I created a dashboard in HA to show real time energy usage and status of the bat
 
 I added some additional readings to help make decisions on when to run the appliances based on battery levels and solar production.
 
-#### Temperature Sensors Dashboard
+<a href="https://github.com/russellventura/HomeAssistant/blob/main/GivEnergy%20Dashboard" target="_blank"> GivEnergy Dashboard Code</a> 
+
+## Temperature Sensors Dashboard
 
 <a href="#" target="_blank"><img style="margin: 10px" src="https://russellventura.co.uk/wp-content/uploads/2022/11/Temperature-Dashboard.jpg" alt="Temperature Dashboard"  /></a>  
 
@@ -51,3 +55,4 @@ I then created a Home Assistant dashboard and used the picture elemement card
 I then added each sensor as a state-badge and positioned it to look good on a Google Nest Hub
 I still have work to do to make it look good on desktop and mobile devices.
 
+<a href="https://github.com/russellventura/HomeAssistant/blob/main/Temperature%20Dashboard" target="_blank"> Temperature Dashboard Code</a> 
