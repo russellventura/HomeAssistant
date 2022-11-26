@@ -5,14 +5,14 @@ an easy way to see that information in a usable way.
 
 I created 3 dashboards
 
-Kitchen Dashboard
+## Kitchen Dashboard
 
 
-GivEnergy Dashboard
+## GivEnergy Dashboard
 
 
 
-##Temperature Sensors Dashboard
+## Temperature Sensors Dashboard
 
 The temperature sensors used are SwitchBot thermostats which provide accurate temperature readings for each sensor.
 Each sensor was placed in the relevant room and labelled
