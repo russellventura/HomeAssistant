@@ -28,13 +28,29 @@ Finally at the top, I have a temperature reading for the Kitchen.
 
 ## GivEnergy Dashboard
 
-<a href="#" target="_blank"><img style="margin: 10px" src="https://russellventura.co.uk/wp-content/uploads/2022/11/GivEnergy-Dashboard.jpg" alt="GivEnergy Dashboard"  /></a>  
+<a href="#" target="_blank"><img style="margin: 10px" src="https://russellventura.co.uk/wp-content/uploads/2022/12/GiveEnergyDashboard-ver2.png" alt="GivEnergy Dashboard"  /></a>  
 
 We have recently had a solar & battery solution installed and wanted an easy way to check on its current status.
 
 I created a dashboard in HA to show real time energy usage and status of the battery charge levels along with the temperature of the batteries and inverter.
 
-I added some additional readings to help make decisions on when to run the appliances based on battery levels and solar production.
+#### Data from GivTCP API
+
+- Inverter Serial Number
+- Inverter Temperature
+- Master Battery Charge Level
+- Master Battery Temperature
+- Master Battery Serial Number
+- Slave Battery Charge Level
+- Slave Battery Temperature
+- Slave Battery Serial Number
+- Excess Solar Production 
+- Live Solar Generation 
+- Solar Generation Today
+- Solar Consumption Today
+- Battery Power to House
+- Batter Power to Grid
+- Live Power Usage - (tesla-style-solar-power-card)
 
 <a href="https://github.com/russellventura/HomeAssistant/blob/main/GivEnergy%20Dashboard" target="_blank"> GivEnergy Dashboard Code</a> 
 
