@@ -56,7 +56,7 @@ I created a dashboard in HA to show real time energy usage and status of the bat
 
 ## Temperature Sensors Dashboard
 
-<a href="#" target="_blank"><img style="margin: 10px" src="https://russellventura.co.uk/wp-content/uploads/2022/11/Temperature-Dashboard.jpg" alt="Temperature Dashboard"  /></a>  
+<a href="#" target="_blank"><img style="margin: 10px" src="https://russellventura.co.uk/wp-content/uploads/2022/12/Temperature-Dashboard.png" alt="Temperature Dashboard"  /></a>  
 
 The temperature sensors used are SwitchBot thermostats which provide accurate temperature readings for each sensor.
 Each sensor was placed in the relevant room and labelled
