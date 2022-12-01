@@ -1,13 +1,145 @@
 type: picture-elements
-image: /local/GE-DB-Blue.png
+image: /local/GE-Dashboard-Solar.png
 elements:
+  - type: state-icon
+    entity: sensor.galaxy_tab_a_2016_battery
+    name: TABLET BATTERY CHARGE ICON
+    style:
+      top: 0%
+      left: 0%
+      color: red
+      '--paper-item-icon-color': Red
+      transform: scale(1,1)
+  - type: state-label
+    entity: sensor.galaxy_tab_a_2016_battery
+    name: TABLET BATTERY CHARGE TEXT
+    style:
+      top: 7.5%
+      left: 2%
+      color: red
+      font-size: 18px
+      font-weight: bold
+  - type: state-label
+    entity: sensor.givtcp_sa2221g173_solar_to_grid
+    prefix: 'Excess Solar :  '
+    style:
+      top: 22.5%
+      left: 28.5%
+      width: 5%
+      color: red
+      font-size: 20px
+  - type: state-label
+    entity: sensor.givtcp_sa2221g173_invertor_serial_number
+    name: INVERTER SERIAL NUMBER
+    style:
+      top: 30.5%
+      left: 13.5%
+      color: black
+  - type: state-badge
+    entity: sensor.givtcp_sa2221g173_invertor_temperature
+    name: INVERTER TEMPERATURE
+    style:
+      top: 38.5%
+      left: 10%
+      color: rgba(0,0,0,0)
+      transform: scale(0.9, 0.9)
+  - type: state-label
+    entity: sensor.givtcp_sa2221g173_pv_power
+    prefix: 'Live Solar Generation:  '
+    style:
+      top: 38.5%
+      left: 35.5%
+      color: lime
+      background-color: rgb(60, 60, 60, 0.7)
+  - type: state-label
+    entity: sensor.givtcp_sa2221g173_pv_energy_today_kwh
+    prefix: 'Solar Generation Today:  '
+    style:
+      top: 50.5%
+      left: 26%
+      width: 5%
+      color: orange
+  - type: state-label
+    entity: sensor.givtcp_sa2221g173_self_consumption_energy_today_kwh
+    prefix: 'Self Consumption Today:  '
+    style:
+      top: 54%
+      left: 26%
+      width: 5%
+      color: white  
+  - type: state-label
+    entity: sensor.givtcp_dx2224g444_battery_soc
+    name: MASTER BATTERY CHARGE
+    prefix: 'Charge :  '
+    style:
+      top: 65.5%
+      left: 13.5%
+      color: white
+      background-color: green
+      font-size: 18px
+  - type: state-badge
+    entity: sensor.givtcp_dx2224g444_battery_temperature
+    name: MASTER BATTERY TEMPERATURE
+    style:
+      top: 89%
+      left: 13.5%
+      color: rgba(0,0,0,0)
+  - type: state-label
+    entity: sensor.givtcp_dx2224g444_battery_serial_number
+    name: MASTER BATTERY SERIAL NUMBER
+    style:
+      top: 93.5%
+      left: 13.5%
+      color: black
+  - type: state-label
+    entity: sensor.givtcp_dx2223g277_battery_soc
+    name: SLAVE BATTERY CHARGE
+    prefix: 'Charge :  '
+    style:
+      top: 65.5%
+      left: 38%
+      color: white
+      background-color: green
+      font-size: 18px
+  - type: state-badge
+    entity: sensor.givtcp_dx2223g277_battery_temperature
+    name: SLAVE BATTERY TEMPERATURE
+    style:
+      top: 89%
+      left: 38%
+      color: rgba(0,0,0,0)
+  - type: state-label
+    entity: sensor.givtcp_dx2223g277_battery_serial_number
+    name: SLAVE BATTERY SERIAL NUMBER
+    style:
+      top: 93.5%
+      left: 38%
+      color: black
+  - type: state-label
+    entity: sensor.givtcp_sa2221g173_battery_to_house
+    prefix: 'To House:  '
+    style:
+      top: 98.1%
+      left: 28%
+      width: 5%
+      color: lime
+      entity_color: red  
+  - type: state-label
+    entity: sensor.givtcp_sa2221g173_battery_to_grid
+    prefix: 'To Grid:  '
+    style:
+      top: 98.1%
+      left: 42%
+      width: 5%
+      color: red
+      secondary-text-color: red  
   - type: custom:digital-clock
     dateFormat:
       weekday: short
       day: 2-digit
       month: long
     style:
-      top: 13.5%
+      top: 10.5%
       left: 67%
       font-size: 18px
       border: solid 5px
@@ -15,37 +147,15 @@ elements:
       border-radius: 25px
       width: 36%
       overflow: hidden
-  - type: state-badge
-    entity: sensor.givtcp_dx2224g444_battery_temperature
-    name: Battery 1 Temperature
-    style:
-      top: 63%
-      left: 30%
-      color: rgba(0,0,0,0)
-  - type: state-badge
-    entity: sensor.givtcp_dx2223g277_battery_temperature
-    name: Battery 2 Temperature
-    style:
-      top: 63%
-      left: 48%
-      color: rgba(0,0,0,0)
-  - type: state-badge
-    entity: sensor.givtcp_sa2221g173_invertor_temperature
-    name: Inverter Temperature
-    style:
-      top: 39%
-      left: 8%
-      color: rgba(0,0,0,0)
-      transform: scale(0.9, 0.9)
   - type: image
     image: /local/GE-Back-Button.png
     tap_action:
       action: navigate
-      navigation_path: /lovelace/kitchen-floor-plan
+      navigation_path: /lovelace-kitchen/0?kiosk
     style:
-      top: 14%
+      top: 11%
       left: 93%
-      width: 10%
+      width: 10%  
   - type: custom:tesla-style-solar-power-card
     name: null
     threshold_in_k: 1
@@ -66,107 +176,9 @@ elements:
     show_gap: true
     change_house_bubble_color_with_flow: 1
     style:
-      top: 62%
-      left: 78%
-      width: 40%
-      padding: 35px
+      top: 59%
+      left: 73%
+      width: 48%
+      padding: 30px
       '--ha-card-background': white
       '--ha-card-border-width': 0px
-  - type: state-label
-    entity: sensor.givtcp_sa2221g173_battery_to_house
-    prefix: 'Battery To House:  '
-    style:
-      top: 80%
-      left: 5.1%
-      width: 5%
-      color: white
-      entity_color: red
-  - type: state-label
-    entity: sensor.givtcp_sa2221g173_battery_to_grid
-    prefix: 'Battery To Grid:  '
-    style:
-      top: 84%
-      left: 5.1%
-      width: 5%
-      color: red
-      secondary-text-color: red
-  - type: state-label
-    entity: sensor.givtcp_sa2221g173_self_consumption_energy_today_kwh
-    prefix: 'Self Consumption Today:  '
-    style:
-      top: 88%
-      left: 5.1%
-      width: 5%
-      color: white
-  - type: state-label
-    entity: sensor.givtcp_sa2221g173_pv_power
-    prefix: 'Live Solar Generation:  '
-    style:
-      top: 92%
-      left: 5.1%
-      width: 5%
-      color: '#75FF33'
-  - type: state-label
-    entity: sensor.givtcp_sa2221g173_pv_energy_today_kwh
-    prefix: 'Solar Generation Today:  '
-    style:
-      top: 96%
-      left: 5.1%
-      width: 5%
-      color: orange
-  - type: state-label
-    entity: sensor.givtcp_sa2221g173_import_power
-    prefix: 'Power from Grid :  '
-    style:
-      top: 80.5%
-      left: 35.1%
-      width: 5%
-      color: yellow
-      font-size: 20px
-  - type: state-label
-    entity: sensor.givtcp_sa2221g173_solar_to_grid
-    prefix: 'Excess Solar :  '
-    style:
-      top: 85%
-      left: 35.1%
-      width: 5%
-      color: red
-      font-size: 20px
-  - type: state-label
-    entity: sensor.givtcp_dx2224g444_battery_serial_number
-    style:
-      top: 67%
-      left: 48.5%
-      color: black
-  - type: state-label
-    entity: sensor.givtcp_dx2223g277_battery_serial_number
-    style:
-      top: 67%
-      left: 30%
-      color: black
-  - type: state-label
-    entity: sensor.givtcp_sa2221g173_invertor_serial_number
-    style:
-      top: 32%
-      left: 12%
-      color: black
-  - type: state-label
-    entity: sensor.givtcp_dx2224g444_battery_soc
-    name: Battery 1 Charge
-    prefix: 'Charge :  '
-    style:
-      top: 36.5%
-      left: 30%
-      color: white
-      background-color: green
-      font-size: 18px
-  - type: state-label
-    entity: sensor.givtcp_dx2223g277_battery_soc
-    name: Battery 1 Charge
-    prefix: 'Charge :  '
-    style:
-      top: 36.5%
-      left: 48%
-      color: white
-      background-color: green
-      font-size: 18px
