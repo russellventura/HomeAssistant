@@ -34,7 +34,7 @@ Elements include:
 I have 18 lights in my kitchen, and used to turn them all on when using the room - this dashboard allows me to select the light or lights I want on
 when performing a given task. <strong>Poppy light</strong> is selected for our dog so when she sleeps in the kitchen she has a light on at 5% brightness. The <strong>cooker light</strong> is activated in the autumn / winter when we are preparing meals and cooking them, and the <strong>sink light</strong> is activated in the autumn / winter when we are cleaning up.
 
-It has 2 additional buttons which link to the other dashboards - <strong>Energy</strong> Dashboard and <strong>Temperature<./strong> Dashboard
+It has 2 additional buttons which link to the other dashboards - <strong>Energy</strong> Dashboard and <strong>Temperature</strong> Dashboard
 
 Finally at the top, I have a temperature reading for the Kitchen along with a battery indicator to show the current state of the solar batteries charge level and then a clock showing the time and date.
 
@@ -44,9 +44,9 @@ Finally at the top, I have a temperature reading for the Kitchen along with a ba
 
 <a href="#" target="_blank"><img style="margin: 10px" src="https://russellventura.co.uk/wp-content/uploads/2022/12/HA-GivEnergy-Dashboard.png" alt="GivEnergy Dashboard"  /></a>  
 
-We have recently had a solar & battery solution installed and wanted an easy way to check on its current status.
+We have recently had a GivEnergy solar & battery solution installed and wanted an easy way to check on its current status.
 
-I created a dashboard in HA to show real time energy usage and status of the battery charge levels along with the temperature of the batteries and inverter.
+I created a dashboard in Home Assistant to show real time energy usage and status of the battery charge levels along with the temperature of the batteries and inverter.
 
 #### Data from GivTCP API
 
@@ -59,39 +59,43 @@ I created a dashboard in HA to show real time energy usage and status of the bat
 - Slave Battery Temperature
 - Slave Battery Serial Number
 - Excess Solar Production 
-- Live Solar Generation 
-- Solar Generation Today
-- Solar Consumption Today
-- Battery Power to House
+- Live Solar Generation
+- Solar String 1 Solar Generation
+- Solar String 2 Solar Generation 
+- Total Solar Generation Today
+- Total Solar Power Consumed Today
+- Battery Power to Home
+- Solar Power to Battery
 - Batter Power to Grid
-- Live Power Usage - (tesla-style-solar-power-card)
+- House live power usage
+- Live Power Usage (Updated from tesla-style-solar-power-card to Energy Distribution Card
 
-<a href="https://github.com/russellventura/HomeAssistant/blob/main/GivEnergy%20Dashboard" target="_blank"> GivEnergy Dashboard Code</a> 
+<a href="https://github.com/russellventura/HomeAssistant/blob/main/GivEnergy%20Dashboard" target="_blank"> View GivEnergy Dashboard Code</a> 
 
 ## Temperature Sensors Dashboard
 
 <a href="#" target="_blank"><img style="margin: 10px" src="https://russellventura.co.uk/wp-content/uploads/2022/12/HA-Temperature-Dashboard.png" alt="Temperature Dashboard"  /></a>  
 
-The temperature sensors used are SwitchBot thermostats which provide accurate temperature readings for each sensor.
+The temperature sensors used are <a href="https://www.amazon.co.uk/SwitchBot-Thermometer-Hygrometer-Temperature-Compatible/dp/B09JW6N72V" target="_blank"> Switchbot Thermometers</a> which provide accurate temperature readings for each sensor.
 Each sensor was placed in the relevant room and labelled
 
-In order to access the Switchbot sensors in Home Assistant I had to hard code some configuration files and reboot my HA Raspberry Pi
+In order to access the Switchbot sensors in Home Assistant I had to hard code some sensor configuration files and reboot my HA Raspberry Pi
 They were then visible as entities within Home Assistant
 
 I created a background image in Figma of the plan of the house (Ground Floor & First Floor)
 
 I then created a Home Assistant dashboard and used the picture elemement card
 
-I then added each sensor as a state-badge and positioned it to look good on a Google Nest Hub
-I still have work to do to make it look good on desktop and mobile devices.
+I then added each sensor as a state-badge and positioned it to look good on an Amazon Fire Tablet 8" HD
+Further development is required to create dashboards that look their best on all devices.
 
-<a href="https://github.com/russellventura/HomeAssistant/blob/main/Temperature%20Dashboard" target="_blank"> Temperature Dashboard Code</a> 
+<a href="https://github.com/russellventura/HomeAssistant/blob/main/Temperature%20Dashboard" target="_blank"> View Temperature Dashboard Code</a> 
 
 ## Humidity Sensors Dashboard
 
 <a href="#" target="_blank"><img style="margin: 10px" src="https://russellventura.co.uk/wp-content/uploads/2022/12/HA-Humidity-Dashboard.png" alt="Humidity Dashboard"  /></a>  
 
-The humidity sensors used are SwitchBot thermostats which provide accurate humidity readings for each sensor.
+The humidity sensors used are <a href="https://www.amazon.co.uk/SwitchBot-Thermometer-Hygrometer-Temperature-Compatible/dp/B09JW6N72V" target="_blank"> Switchbot Thermometers</a> which provide accurate humidity readings for each sensor.
 Each sensor was placed in the relevant room and labelled
 
 In order to access the Switchbot sensors in Home Assistant I had to hard code some configuration files and reboot my HA Raspberry Pi
@@ -101,7 +105,7 @@ I created a background image in Figma of the plan of the house (Ground Floor & F
 
 I then created a Home Assistant dashboard and used the picture elemement card
 
-I then added each sensor as a state-badge and positioned it to look good on a Google Nest Hub
-I still have work to do to make it look good on desktop and mobile devices.
+I then added each sensor as a state-badge and positioned it to look good on an Amazon Fire Tablet 8" HD
+Further development is required to create dashboards that look their best on all devices.
 
-<a href="https://github.com/russellventura/HomeAssistant/blob/main/Temperature%20Dashboard" target="_blank"> Temperature Dashboard Code</a> 
+<a href="https://github.com/russellventura/HomeAssistant/blob/main/Temperature%20Dashboard" target="_blank"> View Humidity Dashboard Code</a> 
