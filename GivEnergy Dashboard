@@ -1,24 +1,18 @@
 type: picture-elements
 image: /local/GE-Dashboard-Solar.png
 elements:
-  - type: state-icon
-    entity: sensor.galaxy_tab_a_2016_battery
-    name: TABLET BATTERY CHARGE ICON
+  - type: custom:stack-in-card
+    cards:
+      - type: energy-distribution
+        link_dashboard: true
+        speed_factor: 1.5
     style:
-      top: 0%
-      left: 0%
-      color: red
-      '--paper-item-icon-color': Red
-      transform: scale(1,1)
-  - type: state-label
-    entity: sensor.galaxy_tab_a_2016_battery
-    name: TABLET BATTERY CHARGE TEXT
-    style:
-      top: 7.5%
-      left: 2%
-      color: red
-      font-size: 18px
-      font-weight: bold
+      top: 60.5%
+      left: 73%
+      width: 50%
+      '--ha-card-background': white
+      '--ha-card-border-width': 0px
+      '--ha-card-border-radius': 0px
   - type: state-label
     entity: sensor.givtcp_sa2221g173_solar_to_grid
     prefix: 'Excess Solar :  '
@@ -52,6 +46,20 @@ elements:
       color: lime
       background-color: rgb(60, 60, 60, 0.7)
   - type: state-label
+    entity: sensor.givtcp_sa2221g173_pv_power_string_1
+    style:
+      top: 32%
+      left: 42.9%
+      color: yellow
+      background-color: rgb(60, 60, 60, 0.7)
+  - type: state-label
+    entity: sensor.givtcp_sa2221g173_pv_power_string_2
+    style:
+      top: 45%
+      left: 42.9%
+      color: yellow
+      background-color: rgb(60, 60, 60, 0.7)
+  - type: state-label
     entity: sensor.givtcp_sa2221g173_pv_energy_today_kwh
     prefix: 'Solar Generation Today:  '
     style:
@@ -66,7 +74,7 @@ elements:
       top: 54%
       left: 26%
       width: 5%
-      color: white  
+      color: white
   - type: state-label
     entity: sensor.givtcp_dx2224g444_battery_soc
     name: MASTER BATTERY CHARGE
@@ -117,29 +125,36 @@ elements:
       color: black
   - type: state-label
     entity: sensor.givtcp_sa2221g173_battery_to_house
-    prefix: 'To House:  '
+    prefix: 'Battery To Home:  '
     style:
-      top: 98.1%
-      left: 28%
-      width: 5%
-      color: lime
-      entity_color: red  
+      top: 71%
+      left: 77%
+      color: green
+      background-color: rgba(0,0,0,0)
+      border-radius: 10px
+      padding-top: 2px
+      font-size: 16px
+      font-weight: bold
+      max-width: 1px
   - type: state-label
     entity: sensor.givtcp_sa2221g173_battery_to_grid
-    prefix: 'To Grid:  '
+    prefix: 'Battery To Grid:  '
     style:
-      top: 98.1%
-      left: 42%
-      width: 5%
+      top: 76.5%
+      left: 58%
       color: red
-      secondary-text-color: red  
+      background-color: rgba(0,0,0,0)
+      border-radius: 10px
+      padding-top: 2px
+      font-size: 16px
+      font-weight: bold
   - type: custom:digital-clock
     dateFormat:
       weekday: short
       day: 2-digit
       month: long
     style:
-      top: 10.5%
+      top: 12.5%
       left: 67%
       font-size: 18px
       border: solid 5px
@@ -151,34 +166,47 @@ elements:
     image: /local/GE-Back-Button.png
     tap_action:
       action: navigate
-      navigation_path: /lovelace-kitchen/0?kiosk
+      navigation_path: /lovelace/kitchen-floor-plan/0?kiosk
     style:
-      top: 11%
+      top: 13%
       left: 93%
-      width: 10%  
-  - type: custom:tesla-style-solar-power-card
-    name: null
-    threshold_in_k: 1
-    speed_factor: 2.1
-    grid_to_house_entity: sensor.givtcp_sa2221g173_grid_to_house
-    grid_to_battery_entity: sensor.givtcp_sa2221g173_grid_to_battery
-    generation_to_grid_entity: sensor.givtcp_sa2221g173_solar_to_grid
-    generation_to_battery_entity: sensor.givtcp_sa2221g173_solar_to_battery
-    generation_to_house_entity: sensor.givtcp_sa2221g173_solar_to_house
-    battery_to_house_entity: sensor.givtcp_sa2221g173_battery_to_house
-    battery_to_grid_entity: sensor.givtcp_sa2221g173_battery_to_grid
-    battery_extra_entity: sensor.givtcp_sa2221g173_soc
-    grid_entity: sensor.givtcp_sa2221g173_grid_power
-    generation_entity: sensor.givtcp_sa2221g173_pv_energy_today_kwh
-    battery_entity: sensor.givtcp_sa2221g173_soc
-    house_entity: sensor.givtcp_sa2221g173_load_power
-    hide_inactive_lines: 1
-    show_gap: true
-    change_house_bubble_color_with_flow: 1
+      width: 10%
+  - type: state-label
+    entity: sensor.givtcp_sa2221g173_soc
+    prefix: 'Available to House:  '
     style:
-      top: 59%
-      left: 73%
-      width: 48%
-      padding: 30px
-      '--ha-card-background': white
-      '--ha-card-border-width': 0px
+      top: 92.3%
+      left: 87%
+      color: white
+      background-color: green
+      padding-top: 2px
+      font-size: 16px
+      font-weight: bold
+      padding-left: 5px
+      padding-right: 5px
+  - type: state-label
+    entity: sensor.givtcp_sa2221g173_solar_to_battery
+    prefix: 'Solar to Battery:  '
+    style:
+      top: 76.5%
+      left: 77%
+      color: orange
+      background-color: rgba(0,0,0,0)
+      padding-top: 2px
+      border-radius: 10px
+      font-size: 16px
+      font-weight: bold
+      max-width: 1px
+  - type: state-label
+    entity: sensor.givtcp_sa2221g173_load_power
+    prefix: 'House Usage:  '
+    style:
+      top: 81.5%
+      left: 77%
+      color: black
+      background-color: rgba(0,0,0,0)
+      padding-top: 2px
+      border-radius: 10px
+      font-size: 16px
+      font-weight: bold
+      max-width: 1px
