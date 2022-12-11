@@ -89,6 +89,8 @@ I then created a Home Assistant dashboard and used the picture elemement card
 I then added each sensor as a state-badge and positioned it to look good on an Amazon Fire Tablet 8" HD
 Further development is required to create dashboards that look their best on all devices.
 
+<strong>UPDATE:</strong> I have added a humidity icon to the top centre of the dashboard that links to the humidity dashboard
+
 <a href="https://github.com/russellventura/HomeAssistant/blob/main/Temperature%20Dashboard" target="_blank"> View Temperature Dashboard Code</a> 
 
 ## Humidity Sensors Dashboard
