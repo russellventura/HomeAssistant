@@ -1,0 +1,163 @@
+type: picture-elements
+image: /local/Humidity-Sensors-BG.png
+elements:
+  - type: custom:digital-clock
+    dateFormat:
+      weekday: long
+      day: 2-digit
+      month: short
+    style:
+      top: 12.5%
+      left: 69%
+      font-size: 18px
+      border: solid 5px
+      border-color: black
+      border-radius: 25px
+      width: 32%
+      overflow: hidden
+  - type: image
+    image: /local/Temps-Back-Button.png
+    tap_action:
+      action: navigate
+      navigation_path: /lovelace/kitchen-floor-plan/?kiosk
+    style:
+      top: 13%
+      left: 92.5%
+      width: 10%
+      border-radius: 0px
+  - type: state-badge
+    entity: sensor.poppy_room_relative_humidity_measurement
+    title: HALLWAY HUMIDITY SENSOR
+    style:
+      top: 43.5%
+      left: 24%
+      color: rgba(0,0,0,0)
+      '--label-badge-red': blue
+      background: rgb(0,0,0,0)
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.kitchen_relative_humidity_measurement
+    title: KITCHEN HUMIDITY SENSOR
+    style:
+      top: 44%
+      left: 8%
+      color: rgb(0,0,0,0)
+      '--label-badge-red': blue
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.network_room_relative_humidity_measurement
+    title: NETWORK ROOM HUMIDITY SENSOR
+    style:
+      top: 58%
+      left: 22%
+      color: rgba(0,0,0,0)
+      '--label-badge-red': blue
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.front_room_relative_humidity_measurement
+    title: LIVING ROOM HUMIDITY SENSOR
+    style:
+      top: 79%
+      left: 31.5%
+      color: rgba(0,0,0,0)
+      '--label-badge-red': blue
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.bathroom_relative_humidity_measurement
+    title: SB HUMIDITY BATHROOM SENSOR
+    style:
+      top: 33%
+      left: 54%
+      color: rgba(0,0,0,0)
+      '--label-badge-red': blue
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.lisa_bedroom_relative_humidity_measurement
+    title: BEDROOM 1 SENSOR
+    style:
+      top: 55%
+      left: 58%
+      color: rgba(0,0,0,0)
+      '--label-badge-red': blue
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.lisa_office_relative_humidity_measurement
+    title: OFFICE 2 HUMIDITY SENSOR
+    style:
+      top: 80%
+      left: 58%
+      color: rgba(0,0,0,0)
+      '--label-badge-red': blue
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.russ_office_relative_humidity_measurement
+    title: OFFICE 1 HUMIDITY SENSOR
+    style:
+      top: 33%
+      left: 81%
+      color: rgba(0,0,0,0)
+      '--label-badge-red': blue
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.landing_relative_humidity_measurement
+    title: LANDING HUMIDITY SENSOR
+    style:
+      top: 70%
+      left: 74%
+      color: rgba(0,0,0,0)
+      '--label-badge-red': blue
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.conservatory_relative_humidity_measurement
+    title: CONSERVATORY HUMIDITY SENSOR
+    style:
+      top: 75.5%
+      left: '-0.1%'
+      color: rgba(0,0,0,0)
+      '--label-badge-red': blue
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.dining_room_relative_humidity_measurement
+    title: DINING ROOM HUMIDITY SENSOR
+    style:
+      top: 77%
+      left: 12%
+      color: rgba(0,0,0,0)
+      '--label-badge-red': blue
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.garage_relative_humidity_measurement
+    title: BEDROOM 4 HUMIDITY SENSOR
+    style:
+      top: 36.5%
+      left: 36%
+      color: rgba(0,0,0,0)
+      '--label-badge-red': blue
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.bedroom_2_relative_humidity_measurement
+    title: BEDROOM 2 HUMIDITY SENSOR
+    style:
+      top: 57%
+      left: 88%
+      color: rgba(0,0,0,0)
+      '--label-badge-red': blue
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.retro_room_relative_humidity_measurement
+    title: BEDROOM 3 HUMIDITY SENSOR
+    style:
+      top: 81%
+      left: 88%
+      color: rgba(0,0,0,0)
+      '--label-badge-red': blue
+      transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.attic_relative_humidity_measurement
+    title: ATTIC HUMIDITY SENSOR
+    style:
+      top: 24%
+      left: 46.5%
+      color: rgba(0,0,0,0)
+      '--label-badge-red': blue
+      transform: scale(1,1)
