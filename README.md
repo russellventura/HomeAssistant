@@ -21,19 +21,24 @@ I created 3 dashboards (now updated to 4 dashboards
 This was the most complicated and most interactive of the dashboards.
 
 Elements include:
-Tumble Dryer toggle to on and off state - when on it shows live energy usage and a count down timer to turn off the smart plug when cycle complete
-Washing Machine toggle to on and off state - when on it shows live energy usage and a count down timer to turn off the smart plug when cycle complete
-Dish Washer toggle to on and off state - when on it shows live energy usage and a count down timer to turn off the smart plug when cycle complete
+- <strong>Tumble Dryer</strong> toggle to on and off state | 
+  By selecting the image of the Tumble Dryer this illuminates the image and activates the current (idle) counter preset to 1 hour. This is how long the cycle takes and then turns off the power once the countdown has expired saving energy by not leaving the dryer powered for ages. In addition is also provides live updates to how much power the appliance is using (shown in red) under Live Power Consumption.
+
+- <strong>Washing Machine</strong> toggle to on and off state | 
+  By selecting the image of the Washing Machine this illuminates the image and activates the current (idle) counter preset to 30 minutes. This is how long the cycle takes and then turns off the power once the countdown has expired saving energy by not leaving the washing machine powered. In addition is also provides live updates to how much power the appliance is using (shown in red) under Live Power Consumption.
+
+
+- <strong>Dish Washer</strong> toggle to on and off state | 
+  By selecting the image of the Dish Washer this illuminates the image and activates the current (idle) counter preset to 1 Hour. This is how long the cycle takes and then turns off the power once the countdown has expired saving energy by not leaving the washing machine powered. In addition is also provides live updates to how much power the appliance is using (shown in red) under Live Power Consumption.
 
 I have 18 lights in my kitchen, and used to turn them all on when using the room - this dashboard allows me to select the light or lights I want on
-when performing a given task. Poppy light is selected for our dog so when she sleeps in the kitchen she has a light on at 5% brightness. The cooker light
-is activated in the autumn / winter when we are preparing meals and cooking them, and the sink light is activated in the autumn / winter when we are cleaning up.
+when performing a given task. <strong>Poppy light</strong> is selected for our dog so when she sleeps in the kitchen she has a light on at 5% brightness. The <strong>cooker light</strong> is activated in the autumn / winter when we are preparing meals and cooking them, and the <strong>sink light</strong> is activated in the autumn / winter when we are cleaning up.
 
-It has 2 additional buttons which link to the other dashboards - Energy Dashboard and Temperature Dashboard
+It has 2 additional buttons which link to the other dashboards - <strong>Energy</strong> Dashboard and <strong>Temperature<./strong> Dashboard
 
-Finally at the top, I have a temperature reading for the Kitchen.
+Finally at the top, I have a temperature reading for the Kitchen along with a battery indicator to show the current state of the solar batteries charge level and then a clock showing the time and date.
 
-<a href="https://github.com/russellventura/HomeAssistant/blob/main/Kitchen%20Dashboard" target="_blank"> Kitchen Dashboard Code</a> 
+<a href="https://github.com/russellventura/HomeAssistant/blob/main/Kitchen%20Dashboard" target="_blank"> View Kitchen Dashboard Code</a> 
 
 ## GivEnergy Dashboard
 
