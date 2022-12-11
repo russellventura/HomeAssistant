@@ -68,7 +68,7 @@ I created a dashboard in Home Assistant to show real time energy usage and statu
 - Solar Power to Battery
 - Batter Power to Grid
 - House live power usage
-- Live Power Usage (Updated from tesla-style-solar-power-card to Energy Distribution Card
+- Live Power Usage (Updated from tesla-style-solar-power-card to Energy Distribution Card)
 
 <a href="https://github.com/russellventura/HomeAssistant/blob/main/GivEnergy%20Dashboard" target="_blank"> View GivEnergy Dashboard Code</a> 
 
