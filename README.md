@@ -1,9 +1,18 @@
 # HomeAssistant Dashboard Project
 
+
+## UPDATE 11th December 2022 
+
+I have continued to develop the dashboards and have added one (the humidity dashboard).
+
+I have also migrated from casting to the google hub as it was proving unreliable and would either freeze, show a blank white screen or just disapear, so I purchased an Amazon Fire Tablet 8" HD and now use that device employing the <a href="https://www.fully-kiosk.com/" target="_blank"> Full Kiosk</a> solution. 
+
+History:
+
 With my interest in smart home technology and energy conservation, I have added a multitiude of sensors around the house to monitor energy usage and wanted to create
 an easy way to see that information in a usable way.
 
-I created 3 dashboards
+I created 3 dashboards (now updated to 4 dashboards
 
 ## Kitchen Dashboard
 
