@@ -1,5 +1,5 @@
 type: picture-elements
-image: /local/HA-TEMP-SENSORS.png
+image: /local/Temperature-Dashboard-2.png
 elements:
   - type: custom:digital-clock
     dateFormat:
@@ -7,9 +7,9 @@ elements:
       day: 2-digit
       month: short
     style:
-      top: 12%
+      top: 12.5%
       left: 69%
-      font-size: 20px
+      font-size: 18px
       border: solid 5px
       border-color: black
       border-radius: 25px
@@ -19,9 +19,9 @@ elements:
     image: /local/Temps-Back-Button.png
     tap_action:
       action: navigate
-      navigation_path: /lovelace/kitchen-floor-plan
+      navigation_path: /lovelace/kitchen-floor-plan/?kiosk
     style:
-      top: 12.5%
+      top: 13%
       left: 92.5%
       width: 10%
       border-radius: 0px
@@ -29,7 +29,7 @@ elements:
     entity: sensor.hallway_temperature_sensor
     title: HALLWAY SENSOR
     style:
-      top: 41.5%
+      top: 43.5%
       left: 24%
       color: rgba(0,0,0,0)
       '--label-badge-red': green
@@ -39,7 +39,7 @@ elements:
     entity: sensor.kitchen_temperature_sensor
     title: KITCHEN SENSOR
     style:
-      top: 42%
+      top: 44%
       left: 8%
       color: rgb(0,0,0,0)
       transform: scale(1,1)
@@ -47,7 +47,7 @@ elements:
     entity: sensor.network_room_temperature_sensor
     title: NETWORK ROOM SENSOR
     style:
-      top: 56%
+      top: 58%
       left: 22%
       color: rgba(0,0,0,0)
       transform: scale(1,1)
@@ -55,7 +55,7 @@ elements:
     entity: sensor.front_door_sensor_temperature_measurement
     title: FRONT DOOR SENSOR
     style:
-      top: 53%
+      top: 55%
       left: 38%
       color: rgba(0,0,0,0)
       '--label-badge-red': blue
@@ -64,15 +64,15 @@ elements:
     entity: sensor.front_room_temperature_sensor
     title: LIVING ROOM SENSOR
     style:
-      top: 77%
+      top: 79%
       left: 31.5%
       color: rgba(0,0,0,0)
       transform: scale(1,1)
   - type: state-badge
-    entity: sensor.water_leak_sensor_temperature_measurement
-    title: BATHROOM SENSOR
+    entity: sensor.bathroom_temperature_sensor
+    title: SB BATHROOM SENSOR
     style:
-      top: 31%
+      top: 33%
       left: 54%
       color: rgba(0,0,0,0)
       transform: scale(1,1)
@@ -80,7 +80,7 @@ elements:
     entity: sensor.lisa_bedroom_temperature_sensor
     title: BEDROOM 1 SENSOR
     style:
-      top: 53%
+      top: 55%
       left: 58%
       color: rgba(0,0,0,0)
       transform: scale(1,1)
@@ -88,7 +88,7 @@ elements:
     entity: sensor.lisa_office_temperature_sensor
     title: OFFICE 2 SENSOR
     style:
-      top: 78%
+      top: 80%
       left: 58%
       color: rgba(0,0,0,0)
       transform: scale(1,1)
@@ -96,7 +96,7 @@ elements:
     entity: sensor.russ_office_temperature_sensor
     title: OFFICE 1 SENSOR
     style:
-      top: 31%
+      top: 33%
       left: 81%
       color: rgba(0,0,0,0)
       transform: scale(1,1)
@@ -104,7 +104,7 @@ elements:
     entity: sensor.landing_temperature_sensor
     title: LANDING SENSOR
     style:
-      top: 68%
+      top: 70%
       left: 74%
       color: rgba(0,0,0,0)
       transform: scale(1,1)
@@ -112,8 +112,8 @@ elements:
     entity: sensor.conservatory_temperature_sensor
     title: CONSERVATORY SENSOR
     style:
-      top: 76%
-      left: 1%
+      top: 75.5%
+      left: '-0.1%'
       color: rgba(0,0,0,0)
       '--label-badge-red': black
       transform: scale(1,1)
@@ -127,9 +127,9 @@ elements:
       transform: scale(1,1)
   - type: state-badge
     entity: sensor.garage_temperature_sensor
-    title: GARAGE SENSOR
+    title: BEDROOM 4 SENSOR
     style:
-      top: 34%
+      top: 36.5%
       left: 36%
       color: rgba(0,0,0,0)
       transform: scale(1,1)
@@ -143,9 +143,34 @@ elements:
       transform: scale(1,1)
   - type: state-badge
     entity: sensor.retro_room_temperature_sensor
-    title: RETRO ROOM SENSOR
+    title: BEDROOM 3 SENSOR
     style:
-      top: 82%
-      left: 87%
+      top: 81%
+      left: 88%
       color: rgba(0,0,0,0)
       transform: scale(1,1)
+  - type: state-badge
+    entity: sensor.attic_temperature_sensor
+    title: ATTIC SENSOR
+    style:
+      top: 24%
+      left: 46.5%
+      color: rgba(0,0,0,0)
+      '--label-badge-red': black
+      transform: scale(1,1)
+  - type: custom:button-card
+    entity: sensor.attic_temperature_sensor
+    icon: mdi:water-percent
+    name: ' '
+    title: HUMIDITY DASHBOARD
+    tap_action:
+      action: navigate
+      navigation_path: /lovelace/humidity/?kiosk
+    style:
+      '--ha-card-background': rgb(0,0,0,0)
+      '--primary-text-color': red
+      '--paper-item-icon-color': rgb(0,0,0,0)
+      '--ha-card-border-width': 0px
+      top: 8%
+      left: 43%
+      transform: scale(1.5,1.5)
