@@ -1,4 +1,4 @@
-Here are the image files that are associated with the code files
+# Here are the image files that are associated with the code files
 
 To use them in Home Assistant:
 
@@ -10,4 +10,3 @@ To use them in Home Assistant:
 - Click <strong>OK</strong>
 
 The file is now within your Home Assistant solution and will now work with the code provided
-
