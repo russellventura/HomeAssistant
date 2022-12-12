@@ -95,7 +95,7 @@ Further development is required to create dashboards that look their best on all
 
 ## Humidity Sensors Dashboard
 
-<a href="#" target="_blank"><img style="margin: 10px" src="https://russellventura.co.uk/wp-content/uploads/2022/12/HA-Humidity-Dashboard.png" alt="Humidity Dashboard"  /></a>  
+<a href="#" target="_blank"><img style="margin: 10px" src="https://russellventura.co.uk/wp-content/uploads/2022/12/HumidityDashboard.png" alt="Humidity Dashboard"  /></a>  
 
 The humidity sensors used are <a href="https://www.amazon.co.uk/SwitchBot-Thermometer-Hygrometer-Temperature-Compatible/dp/B09JW6N72V" target="_blank"> Switchbot Thermometers</a> which provide accurate humidity readings for each sensor.
 Each sensor was placed in the relevant room and labelled
